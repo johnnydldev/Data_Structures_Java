@@ -1,6 +1,7 @@
 ### DATA STRUCTURES WITH JAVA
 
 ´´´
+
 * Stack
 * Queue
 * List
@@ -9,6 +10,7 @@
 
 **Stack** created with arrays this structure have the following methods to use:
 ´´´
+
 * Constructor: Allow you create a stack of 100 size or custom size specify inner the overload method.
 * Empty: Allow you determine if the satck is empty.
 * Full: Allow you determine if the stack is full.
