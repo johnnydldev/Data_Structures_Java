@@ -62,6 +62,11 @@ public class QueueArray {
         return result;
     }//End full method
 
+    //Return the item allocate on front without delete from the queue
+    public int peek(){
+        return queue[front];
+    }//End peek method
+
     public int size(){ return this.count; }//End size of queue
 
 }//End class

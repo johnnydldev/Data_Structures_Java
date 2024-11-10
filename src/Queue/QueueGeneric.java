@@ -1,5 +1,7 @@
 package Queue;
 
+import Stack.StackArrayGeneric;
+
 public class QueueGeneric<T> {
 
     private final static int size = 100;
@@ -68,5 +70,19 @@ public class QueueGeneric<T> {
 
     public int size(){ return this.count; }//End size of queue
 
+    public StackArrayGeneric<T> stackReverse(StackArrayGeneric<T> stack){
+        StackArrayGeneric<T> stackReversed = new StackArrayGeneric<T>(stack.size());
+        QueueGeneric<T> queueReverse = new QueueGeneric<T>(stack.size());
+
+        while(!stack.empty()){
+            queueReverse.enqueue(stack.pop());
+        }//End reverse items
+
+        while(!queueReverse.empty()){
+            stackReversed.push(queueReverse.dequeue());
+        }//Fill stack reversed
+
+        return stackReversed;
+    }//End stack reverse method
 
 }//End queue generic
