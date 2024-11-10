@@ -40,19 +40,22 @@ public class RoundRobin {
     public static void runScheduler(){
         Job job;
         int cpuTime, accumulatedCpuTime = 0;
+        double average = 0;
 
         while(!queue.empty()){
             job = queue.dequeue();
-            cpuTime = job.getCpuTime();
+            cpuTime = job.getCpuTimeLess();
 
             if(cpuTime-quantum > 0){
                 accumulatedCpuTime += quantum;
-                job.setCpuTime(cpuTime-quantum);
+                job.setCpuTimeLess(cpuTime-quantum);
                 queue.enqueue(job);
             }else{
+                average = (double) accumulatedCpuTime /job.getCpuTimeInitial();
                 String message = STR."Job with id \{job.getJobNum()} has been finised on time \{accumulatedCpuTime}";
+                String messageComplement = STR."\twith a wait time average of: \{average}";
                 accumulatedCpuTime += quantum;
-                System.out.println(message );
+                System.out.println(message+messageComplement);
             }
 
         }//End loop

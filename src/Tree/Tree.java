@@ -11,6 +11,7 @@ public class Tree {
         this.root = node;
     }
 
+    //*** On develoment ***
     public void printTree(Node node){
         if(node != null){
             printTree(node.left);
@@ -20,6 +21,7 @@ public class Tree {
 
     }//End print tree
 
+    //*** On develoment ***
     public int sizeTree(Node node){
         int counter = 0;
 
@@ -33,4 +35,4 @@ public class Tree {
     }//End size tree
 
 
-}
+}//End tree class

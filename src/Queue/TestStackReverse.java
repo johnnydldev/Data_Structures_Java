@@ -8,11 +8,11 @@ public class TestStackReverse {
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        int lenght = 5;
-        StackArrayGeneric<Character> stack = new StackArrayGeneric<Character>(lenght), stackReverse = new StackArrayGeneric<Character>(lenght);
-        QueueGeneric<Character> queue = new QueueGeneric<Character>(lenght);
+        int length = 5;
+        StackArrayGeneric<Character> stack = new StackArrayGeneric<Character>(length), stackReverse = new StackArrayGeneric<Character>(length);
+        QueueGeneric<Character> queue = new QueueGeneric<Character>(length);
 
-        for(int i = 0; i < lenght; i++){
+        for(int i = 0; i < length; i++){
             System.out.println("Enter the character to number "+i);
             char temp = scanner.next().charAt(0);
             stack.push(temp);

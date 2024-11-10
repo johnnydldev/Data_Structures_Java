@@ -32,6 +32,30 @@ public class Node {
         }
     }//End insert node data
 
+    public void printNode(Node node){
+        if(node != null){
+            printNode(node.left);
+            System.out.print(node.data+"\t");
+            printNode(node.right);
+        }
+
+    }//End print tree
+
+    //*** ON DEVELOPMENT ***
+    public int takeOff(Node node){
+        int value = -1;
+        if(node != null){
+            if(node.left != null)
+                value = takeOff(node.left);
+
+            value = takeOff(node);
+
+            if(node.right != null)
+                value = takeOff(node.right);
+        }
+
+        return value;
+    }//End take off
 
 
 }//End Node class

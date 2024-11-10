@@ -1,5 +1,7 @@
 package Stack;
 
+import Queue.QueueGeneric;
+
 public class Stack {
     private final static int size = 100;
     private int top;
@@ -44,5 +46,6 @@ public class Stack {
         this.sArray[this.top] = item;
         this.top++;
     }//End push method
+
 
 }//End class Stack
