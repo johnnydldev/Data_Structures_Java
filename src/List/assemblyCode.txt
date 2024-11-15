@@ -1,0 +1,9 @@
+SAMPLE    START     FIRST
+THOMAS    WORD      3
+SYLVESTER WARD      7
+CATS      WORD      ?
+FIRST     LOAD      THOMAS
+          ADD       SYLVESTER
+          STORE     CATS
+          STOP
+          EMD
