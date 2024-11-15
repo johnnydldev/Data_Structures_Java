@@ -42,5 +42,5 @@ Insert: Allow you put on list an item.
 Delete: Allow you take off list an item while the list don't be empty.
 Size: Allow you know the number of items inner of list.
 Search: return a boolean value according to was found in the list the item specify implementing 
-the compareTo method of Comparable Java class.
+the compareTo method of Java's Comparable class.
 ```

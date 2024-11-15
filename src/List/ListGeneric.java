@@ -98,20 +98,6 @@ public class ListGeneric<T extends Comparable<T>> {
         return found;
     }//End search method
 
-    public int compareTo(T item){
-        int result;
-
-        if(reference.compareTo(item) > 0){
-            result = 1;
-        }else if(reference.compareTo(item)< 0){
-            result = -1;
-        }else{
-            result = 0;
-        }
-
-        return result;
-
-    }//End compare to method
-
-
+    public int size(){ return this.count; }//End size method
+    
 }//End list generic class
