@@ -39,7 +39,7 @@ Constructor: Allow you create a list of 100 size or custom size specify inner th
 Empty: Allow you determine if the list is empty.
 Full: Allow you determine if the list is full.
 Insert: Allow you put on list an item.
-Delete: Allow you take off queue an item (The item front) still queue be empty.
+Delete: Allow you take off list an item while the list don't be empty.
 Size: Allow you know the number of items inner of list.
 Search: return a boolean value according to was found in the list the item specify implementing 
 the compareTo method of Comparable Java class.
