@@ -7,7 +7,7 @@ List
 Tree
 ```
 
-**Stack** created with arrays this structure have the following methods to use:
+**Stack** created with arrays this structure has the following methods to use:
 ```
 
 Constructor: Allow you create a stack of 100 size or custom size specify inner the overload method.
@@ -20,7 +20,7 @@ ExpandStack: If the stack is full, it allow you expand stack to double size of i
 QueueReverse: return a new queue with its items reversed, from rear to front.
 ```
 
-**Queue** created with arrays this structure have the following methods to use:
+**Queue** created with arrays this structure has the following methods to use:
 ```
 
 Constructor: Allow you create a queue of 100 size or custom size specify inner the overload method.
@@ -32,7 +32,7 @@ Size: Allow you know the number of items inner of queue.
 StackReverse: return a new stack with its items reversed, from last to first.
 ```
 
-**List** created with arrays this structure have the following methods to use:
+**List** created with arrays this structure has the following methods to use:
 ```
 
 Constructor: Allow you create a list of 100 size or custom size specify inner the overload method.
@@ -43,4 +43,13 @@ Delete: Allow you take off list an item while the list don't be empty.
 Size: Allow you know the number of items inner of list.
 Search: return a boolean value according to was found in the list the item specify implementing 
 the compareTo method of Java's Comparable class.
+```
+
+**Node** class for create liked list has the following methods to use:
+```
+
+Constructor: Allow you create a node with default value and next node in null or custom value specify inner the overload method.
+Getters and Setters for data: getData() allow you get node's value, setData() allow you edit node's value.
+Getters and Setters for next node: getNext() allow you get node's reference memory allocation, setNext() allow you edit node's reference memory allocation pointer.
+output: Allow you print each item on list.
 ```
