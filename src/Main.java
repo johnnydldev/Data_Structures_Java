@@ -40,7 +40,7 @@ public class Main {
 
         printTree(root);
 
-        System.out.println("\nNode's number is: "+sizeTree(root));
+        System.out.println("\nNode.Node's number is: "+sizeTree(root));
 
     }
 
