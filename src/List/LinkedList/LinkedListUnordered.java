@@ -1,7 +1,6 @@
 package List.LinkedList;
 
 import Node.NodeGeneric;
-import jdk.jshell.spi.ExecutionControl;
 
 public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<T> {
 
@@ -9,10 +8,9 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
     private int nodeCount = 0;
     private int indexBase = 0;
     private NodeGeneric<T> result = new NodeGeneric<T>();
-    private NodeGeneric<T> current , last = null;
+    private NodeGeneric<T> current;
     private T dataResult = null;
     private int indexResult = -1;
-
 
 
     public LinkedListUnordered(){
@@ -48,7 +46,7 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
                     current = searchNode(this.root, --index);
                     current.setNext(null);
                 }else{
-                    last = searchNode(this.root, index-1);
+                    NodeGeneric<T> last = searchNode(this.root, index - 1);
                     current = searchNode(this.root,index+1);
                     last.setNext(current);
                 }
@@ -78,29 +76,27 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
 
         if(this.nodeCount > 0){
             result = searchIndexByData(this.root, data);
-            System.out.println("The result is: "+result);
             indexResult = -1;
         }
 
         return result;
-    }//End get index by data method
+    }//End get first index that match with data method
 
     public boolean isEmpty(){
         return this.nodeCount <= 0;
     }//End return is empty method
 
     private NodeGeneric<T> assignValues(NodeGeneric<T> root, T data){
-        NodeGeneric<T> newNode = new NodeGeneric<T>(data);
 
         if(root == null){
-            root = newNode;
+            root = new NodeGeneric<T>(data);
             this.nodeCount++;
         }else{
             root.setNext(assignValues(root.getNext(), data));
         }
 
         return root;
-    }//End assign values method
+    }//End assign values data nodes method
 
 
     private NodeGeneric<T> searchNode(NodeGeneric<T> root, int index){
@@ -114,7 +110,7 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
         }
 
         return result;
-    }//End search node
+    }//End search node by index method
 
     private T searchData(NodeGeneric<T> root, int index){
 
@@ -127,7 +123,7 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
         }
 
         return dataResult;
-    }//End search node
+    }//End search data node by index method
 
     private int searchIndexByData(NodeGeneric<T> root, T data){
 
@@ -140,7 +136,7 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
         }
 
         return indexResult;
-    }//End search node
+    }//End search index node by data method
 
     public void printValuesReverse(){
 
@@ -148,7 +144,7 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
             this.root.output(this.root);
         }
 
-    }//End print data nodes method
+    }//End print data nodes in reverse order method
 
     public void printValues(){
        print(this.root);
@@ -156,7 +152,7 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
 
     public void printIndexes(){
         printIndex(this.root);
-    }//End print data nodes method
+    }//End print index nodes method
 
     public int size(){
         return this.nodeCount;
@@ -165,7 +161,7 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
     private void print(NodeGeneric<T> node){
 
         if(node != null){
-            System.out.print(STR."\{node.getData()}\t");
+            System.out.format("%s\t",node.getData());
             print(node.getNext());
         }
 
@@ -174,7 +170,7 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
     private void printIndex(NodeGeneric<T> node){
 
         if(node != null){
-            System.out.print(node.getIndex()+"\t");
+            System.out.format("%d\t", node.getIndex());
             printIndex(node.getNext());
         }
 
@@ -191,6 +187,5 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
         this.indexBase = 0 ;
 
     }//End assign indexes method
-
 
 }//End liked list unordered
