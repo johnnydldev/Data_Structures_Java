@@ -10,8 +10,6 @@ public interface LinkedList<T extends Comparable<T>> {
 
     public void remove(int index);
 
-    public void remove(T data);
-
     public T get(int index);
 
     public int indexOf(T data);
