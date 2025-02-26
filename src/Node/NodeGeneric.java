@@ -32,7 +32,7 @@ public class NodeGeneric<T extends Comparable<T>> {
         this.data = data;
     }//End set data method
 
-    public NodeGeneric<T>getNext(){
+    public NodeGeneric<T> getNext(){
         return this.next;
     }//End get next node method
 
@@ -46,7 +46,7 @@ public class NodeGeneric<T extends Comparable<T>> {
 
     public void setIndex(int value){
         this.index = value;
-    }
+    }//
 
     public void outputReverse(NodeGeneric<T> node){
         if(node != null){

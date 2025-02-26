@@ -7,45 +7,40 @@ import List.LinkedList.LinkedListUnordered;
 public class TestLinkedList {
 
     public static void main(String[] args){
-        LinkedList<Integer> scores = new LinkedListUnordered<Integer>();
+        LinkedList<String> scores = new LinkedListUnordered<String>();
 
-        scores.insert(4);
-        scores.insert(3);
-        scores.insert(9);
-        scores.insert(6);
-        scores.insert(9);
-        scores.insert(2);
-        scores.insert(15);
-        scores.insert(20);
+        scores.insert("Rogelio");
+        scores.insert("Wanda");
+        scores.insert("Andrea");
+        scores.insert("Sergio");
+        scores.insert("Orlando");
+        scores.insert("Zaira");
+        scores.insert("Benito");
+        scores.insert("Alejandro");
 
-        System.out.println("The list size is: "+scores.size()+" The values are:");
+        System.out.println("The list size is: "+scores.size()+" \nThe values are:");
         scores.printValues();
 
+        //System.out.println("\nThe list indexes are:");
+        //scores.printIndexes();
+
+        scores.remove(4);
+
+        System.out.println("\n\nThe list size is: "+scores.size()+" \nThe values are:");
+        scores.printValues();
         System.out.println("\nThe list indexes are:");
         scores.printIndexes();
 
-        scores.remove(0);
-        System.out.println("\nThe list size is: "+scores.size()+" The values are:");
-        scores.printValues();
 
-        scores.indexOf(6);
 
-        scores.remove(6);
-        System.out.println("\nThe list size is: "+scores.size()+" The values are:");
-        scores.printValues();
-        //scores.printIndexes();
+        scores.edit(2, "Paola");
 
-        scores.remove(3);
-        System.out.println("\nThe list size is: "+scores.size()+" The values are:");
-        scores.printValues();
-        scores.edit(2, 20);
-
-        System.out.println();
+        System.out.println("\n\nThe list size is: "+scores.size()+" \nThe values are:");
         scores.printValues();
 
         scores.get(2);
 
-        System.out.println(scores.isEmpty());
+        System.out.format("%n%B",scores.isEmpty());
 
     }//End main method
 

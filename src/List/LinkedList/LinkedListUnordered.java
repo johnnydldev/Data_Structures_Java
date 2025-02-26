@@ -11,7 +11,7 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
     private NodeGeneric<T> current;
     private T dataResult = null;
     private int indexResult = -1;
-    
+
     public LinkedListUnordered(){
         this.root = null;
     }//End default constructor
@@ -25,7 +25,7 @@ public class LinkedListUnordered<T extends Comparable<T>> implements LinkedList<
         if(this.nodeCount > 0 && index >= 0 && index < this.nodeCount){
             current = searchNode(this.root, index);
             current.setData(data);
-        }
+        }//
 
     }//End edit method
 
