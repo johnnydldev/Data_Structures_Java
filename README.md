@@ -1,40 +1,69 @@
-### DATA STRUCTURES WITH JAVA
-```
+> [!NOTE]
+> ### DATA STRUCTURES WITH JAVA
 
+Custom data structures that you can consult its implementation
+```
 Stack
 Queue
 List
 Tree
 ```
 
+> [!IMPORTANT]
+> The following data structures are on array based
+
 **Stack** created with arrays this structure has the following methods to use:
 ```
-
-Constructor: Allow you create a stack of 100 size or custom size specify inner the overload method.
-Empty: Allow you determine if the stack is empty.
-Full: Allow you determine if the stack is full.
-Push: Allow you put on stack an item, if the stack is full it can be expanded of dinamic way.
-Pop: Allow you take off stack an item (The item top) still stack be empty.
-Size: Allow you know the number of items inner of stack.
-ExpandStack: If the stack is full, it allow you expand stack to double size of itself.
-QueueReverse: return a new queue with its items reversed, from rear to front.
+`Constructor:` Allow you create a stack of 100 size or custom size specify inner the overload method.
+`Empty:` Allow you determine if the stack is empty.
+`Full:` Allow you determine if the stack is full.
+`Push:` Allow you put on stack an item, if the stack is full it can be expanded of dinamic way.
+`Pop:` Allow you take off stack an item (The item top) still stack be empty.
+`Size:` Allow you know the number of items inner of stack.
+`ExpandStack:` If the stack is full, it allow you expand stack to double size of itself.
+`QueueReverse:` return a new queue with its items reversed, from rear to front.
 ```
+
+> [!TIP]
+> You can implement the stack doing the following steps
+```ruby
+    //Declare an object of parent interface StackGeneric and instancing a new StackArrayGeneric object 
+    StackGeneric<Character> stack = new StackArrayGeneric<Character>(3);
+
+    //Using the `push` method to input data of character type into our stack 
+    stack.push('u');
+    stack.push('y');
+    stack.push('l');
+    stack.push('e');
+
+    //Show the stack size on elements number contains based
+    System.out.println("Size of stack: "+stack.size());
+
+    //Print the elements into the stack
+    System.out.print("Values in stack are: ");
+
+    //Iterate all items from last to first while the stack does not empty
+    while(!stack.empty()){
+        System.out.print("\t"+stack.pop());
+    }
+
+```
+![for more information following link:](https://github.com/johnnydldev/Data_Structures_Java/blob/main/src/Stack/StackArrayGeneric.java)
+
 
 **Queue** created with arrays this structure has the following methods to use:
 ```
-
-Constructor: Allow you create a queue of 100 size or custom size specify inner the overload method.
-Empty: Allow you determine if the queue is empty.
-Full: Allow you determine if the queue is full.
-Enqueue: Allow you put on queue an item.
-Dequeue: Allow you take off queue an item (The item front) still queue be empty.
-Size: Allow you know the number of items inner of queue.
-StackReverse: return a new stack with its items reversed, from last to first.
+`Constructor:` Allow you create a queue of 100 size or custom size specify inner the overload method.
+`Empty:` Allow you determine if the queue is empty.
+`Full:` Allow you determine if the queue is full.
+`Enqueue:` Allow you put on queue an item.
+`Dequeue:` Allow you take off queue an item (The item front) still queue be empty.
+`Size:` Allow you know the number of items inner of queue.
+`StackReverse:` return a new stack with its items reversed, from last to first.
 ```
 
 **List** created with arrays this structure has the following methods to use:
 ```
-
 Constructor: Allow you create a list of 100 size or custom size specify inner the overload method.
 Empty: Allow you determine if the list is empty.
 Full: Allow you determine if the list is full.
