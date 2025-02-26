@@ -38,7 +38,7 @@ public class TestLinkedList {
         System.out.println("\n\nThe list size is: "+scores.size()+" \nThe values are:");
         scores.printValues();
 
-        scores.get(2);
+        System.out.format("The value of index two is: %n%S",scores.get(2));
 
         System.out.format("%n%B",scores.isEmpty());
 
