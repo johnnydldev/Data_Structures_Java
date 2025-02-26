@@ -25,6 +25,9 @@ public class ListArray {
         if(!empty()){
             if(search(item)){
                 for(int i = position; i < count-1; i--){
+                    if(i == -1)
+                        break;
+
                     list[i] = list[i+1];
                 }
                 count--;
